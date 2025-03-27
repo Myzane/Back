@@ -1,0 +1,1 @@
+INSERT INTO laravel.chats (id, sender_id, item_offer_id, message, file, audio, created_at, updated_at, is_read) VALUES (1, 5, 1, 'bonjour, baisse le prix ?', '', '', '2025-03-19 20:24:17', '2025-03-19 20:24:17', 0);

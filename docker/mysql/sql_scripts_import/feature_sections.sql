@@ -1,0 +1,1 @@
+INSERT INTO laravel.feature_sections (id, title, slug, sequence, filter, value, style, min_price, max_price, created_at, updated_at, description) VALUES (1, 'promo Mars', 'promo-mars', 1, 'category_criteria', '5', 'style_2', null, null, '2025-03-14 00:01:55', '2025-03-14 00:01:55', 'best promo job');

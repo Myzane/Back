@@ -534,7 +534,7 @@ class ApiController extends Controller {
 
             //            // Other users should only get approved items
             //            if (!Auth::check()) {
-            //                $sql->where('status', 'approved');
+            //                $mysql->where('status', 'approved');
             //            }
 
             // Sort By

@@ -1,0 +1,12 @@
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (1, 2, 3, 'Vehicule', '2025-03-12 19:38:53', '2025-03-12 20:27:06');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (2, 1, 3, 'Voiture', '2025-03-12 19:42:51', '2025-03-12 20:31:43');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (3, 3, 3, 'Immobilier', '2025-03-12 20:21:18', '2025-03-12 20:21:18');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (4, 3, 4, 'العقارات', '2025-03-12 20:21:18', '2025-03-12 20:21:18');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (5, 2, 4, 'عربة', '2025-03-12 20:27:06', '2025-03-12 20:27:06');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (7, 1, 4, 'سيارة', '2025-03-12 20:31:43', '2025-03-12 20:31:43');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (9, 4, 3, 'Moto', '2025-03-12 20:33:42', '2025-03-12 20:33:42');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (10, 4, 4, 'موتو', '2025-03-12 20:33:42', '2025-03-12 20:33:42');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (11, 5, 3, 'Emploi', '2025-03-12 21:07:46', '2025-03-12 21:07:46');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (12, 5, 4, 'وظيفة', '2025-03-12 21:07:46', '2025-03-12 21:07:46');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (13, 6, 3, 'Meuble', '2025-03-13 20:06:16', '2025-03-13 20:06:16');
+INSERT INTO laravel.category_translations (id, category_id, language_id, name, created_at, updated_at) VALUES (14, 6, 4, 'أثاث', '2025-03-13 20:06:16', '2025-03-13 20:06:16');

@@ -1,0 +1,1 @@
+INSERT INTO laravel.sliders (id, image, sequence, third_party_link, created_at, updated_at, model_type, model_id) VALUES (1, 'sliders/67d21cc51b4035.999876521741823173.png', '1', '', '2025-03-12 23:46:13', '2025-03-12 23:46:13', 'App\\Models\\Category', 3);

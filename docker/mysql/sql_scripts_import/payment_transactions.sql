@@ -1,0 +1,6 @@
+INSERT INTO laravel.payment_transactions (id, user_id, amount, payment_gateway, order_id, payment_status, created_at, updated_at) VALUES (1, 3, 0, 'cash', null, 'succeed', '2025-03-12 21:15:08', '2025-03-12 21:15:08');
+INSERT INTO laravel.payment_transactions (id, user_id, amount, payment_gateway, order_id, payment_status, created_at, updated_at) VALUES (2, 2, 200, 'cash', null, 'succeed', '2025-03-12 21:30:01', '2025-03-12 21:30:01');
+INSERT INTO laravel.payment_transactions (id, user_id, amount, payment_gateway, order_id, payment_status, created_at, updated_at) VALUES (3, 3, 200, 'cash', null, 'succeed', '2025-03-12 21:33:17', '2025-03-12 21:33:17');
+INSERT INTO laravel.payment_transactions (id, user_id, amount, payment_gateway, order_id, payment_status, created_at, updated_at) VALUES (4, 4, 200, 'cash', null, 'succeed', '2025-03-12 21:52:05', '2025-03-12 21:52:05');
+INSERT INTO laravel.payment_transactions (id, user_id, amount, payment_gateway, order_id, payment_status, created_at, updated_at) VALUES (5, 4, 50, 'cash', null, 'succeed', '2025-03-12 21:53:01', '2025-03-12 21:53:01');
+INSERT INTO laravel.payment_transactions (id, user_id, amount, payment_gateway, order_id, payment_status, created_at, updated_at) VALUES (6, 5, 200, 'cash', null, 'succeed', '2025-03-19 20:33:52', '2025-03-19 20:33:52');

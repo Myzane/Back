@@ -1,0 +1,1 @@
+INSERT INTO laravel.custom_fields (id, name, type, image, required, `values`, min_length, max_length, status, created_at, updated_at) VALUES (1, 'Brand', 'textbox', 'custom-fields/67d1e4267ba668.057823801741808678.jpeg', 0, null, 5, 40, 1, '2025-03-12 19:44:38', '2025-03-12 19:44:38');

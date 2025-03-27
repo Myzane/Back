@@ -4,13 +4,17 @@
 /.env.*
 /storage/*.log
 /storage/framework
+/storage/*.key
 /storage/oauth-private.key
 /storage/oauth-public.key
 /bootstrap/cache
-
+.bash_history
+.npm
 # Ignorer les fichiers IDE et OS spécifiques
 /.vscode
 /.idea
 *.swp
 .DS_Store
 Thumbs.db
+
+!.gitkeep

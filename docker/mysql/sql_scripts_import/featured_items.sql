@@ -1,0 +1,2 @@
+INSERT INTO laravel.featured_items (id, start_date, end_date, item_id, package_id, user_purchased_package_id, created_at, updated_at) VALUES (1, '2025-03-12', '2025-03-22', 1, 1, 3, '2025-03-12 21:59:31', '2025-03-12 21:59:31');
+INSERT INTO laravel.featured_items (id, start_date, end_date, item_id, package_id, user_purchased_package_id, created_at, updated_at) VALUES (2, '2025-03-19', '2025-03-29', 5, 1, 7, '2025-03-19 20:34:20', '2025-03-19 20:34:20');

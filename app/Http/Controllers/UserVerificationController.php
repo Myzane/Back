@@ -170,7 +170,7 @@ class UserVerificationController extends Controller {
 
             if (!empty($_GET['search'])) {
                 $sql->search($_GET['search']);
-//            $sql->where('id', 'LIKE', "%$search%")->orwhere('question', 'LIKE', "%$search%")->orwhere('answer', 'LIKE', "%$search%");
+//            $mysql->where('id', 'LIKE', "%$search%")->orwhere('question', 'LIKE', "%$search%")->orwhere('answer', 'LIKE', "%$search%");
 
             }
             $total = $sql->count();
