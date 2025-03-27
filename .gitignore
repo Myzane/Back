@@ -1,0 +1,16 @@
+/vendor
+/node_modules
+/.env
+/.env.*
+/storage/*.log
+/storage/framework
+/storage/oauth-private.key
+/storage/oauth-public.key
+/bootstrap/cache
+
+# Ignorer les fichiers IDE et OS spécifiques
+/.vscode
+/.idea
+*.swp
+.DS_Store
+Thumbs.db

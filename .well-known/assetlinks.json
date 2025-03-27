@@ -1,0 +1,26 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.SooqPkg.aben",
+            "sha256_cert_fingerprints": [
+                "ac:d8:79:14:14:c8:b5:c4:fb:b4:c2:f8:01:42:fa:e4:27:43:24:ab:ae:f7:aa:c2:cc:96:6e:dc:9d:2f:d7:47"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.SooqPkg.aben",
+            "sha256_cert_fingerprints": [
+                "C8:7B:75:BD:A2:AF:6B:E2:93:50:AA:20:43:83:68:DE:AE:87:4B:1C:7A:B3:17:9E:CA:53:F9:BC:A7:9B:F2:39"
+            ]
+        }
+    }
+]
