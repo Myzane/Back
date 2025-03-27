@@ -2,11 +2,15 @@ FROM serversideup/php:8.1-fpm
 
 USER root
 
-# Install dependencies
+# Install dependencies including GD requirements
 RUN apt-get update && apt-get install -y \
     libexif-dev \
     curl \
-    && docker-php-ext-install exif
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install exif gd
 
 # Install Node.js and npm
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
