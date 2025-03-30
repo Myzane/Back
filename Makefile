@@ -1,7 +1,20 @@
-.PHONY: db-import db-backup db-reset db-status
+.PHONY: db-import db-backup db-reset db-status up stop down
 
 SQL_DIR ?= docker/mysql/sql_scripts_import
 
+up:
+	@echo "🚀 Starting all containers..."
+	@docker compose up -d
+
+# Stop all containers
+stop:
+	@echo "🛑 Stopping all containers..."
+	@docker compose stop
+
+# Remove all containers, networks created by up
+down:
+	@echo "🧹 Removing all containers and networks..."
+	@docker compose down
 
 # Import all SQL files
 db-import:

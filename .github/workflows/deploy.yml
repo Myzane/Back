@@ -1,0 +1,81 @@
+name: Deploy to EC2
+
+on:
+  release:
+    types: [published]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      # $schema: https://json.schemastore.org/github-workflow.json
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, exif, pcntl, bcmath, gd
+
+      - name: Install Composer Dependencies
+        run: composer install --no-dev --optimize-autoloader --no-interaction
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Install NPM Dependencies
+        run: npm ci
+
+      - name: Build Frontend Assets
+        run: npm run build
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to EC2
+        run: |
+          # Create deployment archive (exclude dev files)
+          tar --exclude=".git" --exclude="node_modules" --exclude="tests" -czf /tmp/deploy.tar.gz .
+          
+          # Upload archive to server
+          scp /tmp/deploy.tar.gz ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }}:/tmp/
+          
+          # Deploy on server
+          ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} << 'EOF'
+            # Navigate to app directory
+            cd ${{ secrets.APP_PATH }}
+          
+            # Create backup of current version
+            timestamp=$(date +%Y%m%d%H%M%S)
+            mkdir -p ~/backups
+            tar -czf ~/backups/backup_${timestamp}.tar.gz .
+          
+            # Extract new version
+            tar -xzf /tmp/deploy.tar.gz -C .
+          
+            # Install dependencies if needed
+            composer install --no-dev --optimize-autoloader
+          
+            # Run migrations (with --force to run in production)
+            php artisan migrate --force
+          
+            # Clear cache
+            php artisan config:clear
+            php artisan route:clear
+            php artisan view:clear
+            php artisan cache:clear
+          
+            # Update file permissions
+            sudo chown -R www-data:www-data .
+            sudo chmod -R 775 storage bootstrap/cache
+          
+            # Reload PHP-FPM
+            sudo service php8.1-fpm reload
+          
+            # Remove deployment archive
+            rm /tmp/deploy.tar.gz
+          EOF
